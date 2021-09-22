@@ -1,0 +1,24 @@
+class Node:   # TO CREATE THE NODES
+  def __init__(self,data): #CLASS CONSTRUCTOR/ INITIALIZATION METHOD. This method is called whenever you create a new instance of the class.
+  # initialize the fields of the node
+    self.data= data
+    self.ref= None
+    
+#####node1= Node(10)    #this will create a node with value 10 and reference None.
+#####print(node1)   #will give the reference of this object
+
+class LinkedList:
+  def __init__(self):
+    self.head=None  #empty linked list
+  def printLL(self):
+    if self.head is None:
+      print("Linked List is empty")
+    else:
+      n= self.head 
+      while n is not None:
+        print(n.data)
+        n= n.ref  # for traversing and going to the next node.
+LL1= LinkedList()
+LL1.printLL()
+    # we use for loop when we know how many times we have to execute the loop body
+    # while loop is used when we know the stopping condition. 
